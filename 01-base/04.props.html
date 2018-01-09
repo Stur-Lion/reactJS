@@ -7,7 +7,6 @@
 </head>
 <body>
 <div id="hello"></div>
-<div id="hello2"></div>
 </body>
 </html>
 <script src="./react.js"></script>
@@ -21,5 +20,6 @@
         )
       }
     })
+    ReactDOM.render(<PropsComponents myAttr="aaa" />,document.getElementById('hello'))
 
 </script>

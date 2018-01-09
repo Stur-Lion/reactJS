@@ -1,0 +1,19 @@
+{
+  "name": "reactjs",
+  "version": "1.0.0",
+  "description": "jspang的react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cckings/reactJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cckings/reactJS/issues"
+  },
+  "homepage": "https://github.com/cckings/reactJS#readme"
+}

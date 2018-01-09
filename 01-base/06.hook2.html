@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="hello"></div>
+</body>
+</html>
+<script src="./react.js"></script>
+<script src="./react-dom.js"></script>
+<script src="http://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script>
+<script type="text/babel">
+    var HookComponents = React.createClass({
+        getInitialState:function () {
+            return {
+                opacity:1
+            }
+        },
+        componentDidMount:function () {
+            var flag = true
+            setInterval(function () {
+                if(flag){
+                    if(this.state.opacity>=0.1){
+                        this.setState({
+                            opacity:this.state.opacity-0.05
+                        })
+                    }else{
+                        flag = false
+                    }
+                }else{
+                    if(this.state.opacity<=1){
+                        this.setState({
+                            opacity:this.state.opacity+0.05
+                        })
+                    }else{
+                        flag = true
+                    }
+                }
+            }.bind(this),50)
+        },
+        render:function () {
+            return(
+                <div>
+                    <h2 style={{opacity:this.state.opacity}}>Hello {this.props.name}</h2>
+                </div>
+            )
+        }
+    })
+    ReactDOM.render(<HookComponents name='lion'/>,document.getElementById('hello'))
+</script>
