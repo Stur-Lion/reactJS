@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="./react.js"></script>
+    <script src="./react-dom.js"></script>
+    <script src="http://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script>
 </head>
 <body>
-
+<div id=demo></div>
 </body>
 </html>
+<script type="text/babel">
+    var FormComponents = React.createClass({
+      getInitialState:function () {
+        return{
+          username:'1',
+          isChecked:false,
+          sex:1
+        }
+      },
+      changeHandle:function (name,event) {
+        var newState={};
+        newState[name] = name=="checked"?event.target.checked:event.target.value;
+        this.setState(newState)
+        console.log(newState);
+      },
+      render:function () {
+        return(
+          <form>
+            <label htmlFor="username">姓名</label>
+            <input type="text" name="username" value={this.state.username} id="username" onChange={this.changeHandle.bind(this,"username")}/>
+            <br/>
+            <label htmlFor="checked">是否？</label>
+            <input type="checkBox" name="checked" id="checked" checked={this.state.isChecked} onChange={this.changeHandle.bind(this,"isChecked")}/>
+            <br/>
+            <label htmlFor="selected">请选择</label>
+            <select name="selected" id="selected" value={this.state.sex} onChange={this.changeHandle.bind(this,"sex")}>
+              <option value="0">男</option>
+              <option value="1">女</option>
+            </select>
+            <br/>
+            <button type="submit">提交</button>
+          </form>
+        )
+      }
+    })
+    ReactDOM.render(<FormComponents/>,document.getElementById('demo'))
+</script>
