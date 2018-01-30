@@ -8,7 +8,9 @@ const navbar = () => (
       <ul>
         <li><NavLinks className="nav" to="/">liona</NavLinks></li>
         <li><NavLinks className="nav" to="/lionb">lionb</NavLinks></li>
-        <li><NavLinks className="nav" to="/lionc">lionc</NavLinks></li>
+        <li><NavLinks className="nav" to="/lionc/hahah">lionc</NavLinks></li>
+        <li><NavLinks className="nav" to="/redirct">redirct</NavLinks></li>
+        <li><NavLinks to='/react'>404</NavLinks></li>
       </ul>
     </div>
   </div>
