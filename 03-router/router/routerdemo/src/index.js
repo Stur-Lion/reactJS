@@ -7,13 +7,14 @@ import Lionc from './child/lionc.js';
 import Error from './child/error.js';
 import Nav from './child/nav.js';
 import './index.css';
+
 //import App from './App';
 
 
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-    <Router basename="api" forceRefresh={true}>
+    <Router basename="api">
       <div>
         <Nav/>
         <Switch>
