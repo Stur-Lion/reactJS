@@ -15,14 +15,14 @@
 <script src="./react-dom.js"></script>
 <script src="http://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script>
 <script type="text/babel">
-    var HelleWorlds = React.createClass({
-      render:function () {
-        return <h1>Hello World,我是{this.props.name}</h1>;
-      }
-    });
-    ReactDOM.render(
-      <HelleWorlds name="lion"/>,
-      document.getElementById('hello')
-    )
+  var HelleWorlds = React.createClass({
+    render: function () {
+      return <h1>Hello World,我是{this.props.name}</h1>;
+    }
+  });
+  ReactDOM.render(
+    <HelleWorlds name="lion"/>,
+    document.getElementById('hello')
+  )
 
 </script>

@@ -13,24 +13,24 @@
 <script src="./react-dom.js"></script>
 <script src="http://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script>
 <script type="text/babel">
-    var PropsType = React.createClass({
-      propTypes:{
-        title:React.PropTypes.number.isRequired
-      },
-      getDefaultProps:function () {
-        return{
-          tip:'lion'
-        }
-      },
-      render:function () {
-        return(
-          <div>
-              <h1>{this.props.title}</h1>
-              <h1>{this.props.tip}</h1>
-          </div>
-        )
+  var PropsType = React.createClass({
+    propTypes: {
+      title: React.PropTypes.number.isRequired
+    },
+    getDefaultProps: function () {
+      return {
+        tip: 'lion'
       }
-    })
-    var flag = 111
-    ReactDOM.render(<PropsType title={flag} />,document.getElementById('hello'))
+    },
+    render: function () {
+      return (
+        <div>
+          <h1>{this.props.title}</h1>
+          <h1>{this.props.tip}</h1>
+        </div>
+      )
+    }
+  })
+  var flag = 111
+  ReactDOM.render(<PropsType title={flag}/>, document.getElementById('hello'))
 </script>

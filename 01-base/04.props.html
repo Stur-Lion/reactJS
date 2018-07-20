@@ -13,13 +13,13 @@
 <script src="./react-dom.js"></script>
 <script src="http://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script>
 <script type="text/babel">
-    var PropsComponents = React.createClass({
-      render:function () {
-        return (
-          <div>myAttr属性值是：{this.props.myAttr}</div>
-        )
-      }
-    })
-    ReactDOM.render(<PropsComponents myAttr="aaa" />,document.getElementById('hello'))
+  var PropsComponents = React.createClass({
+    render: function () {
+      return (
+        <div>myAttr属性值是：{this.props.myAttr}</div>
+      )
+    }
+  })
+  ReactDOM.render(<PropsComponents myAttr="aaa"/>, document.getElementById('hello'))
 
 </script>

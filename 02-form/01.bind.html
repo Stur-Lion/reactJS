@@ -21,6 +21,8 @@
         }
       },
       changeHandle:function (name,event) {
+        console.log(name);
+        console.log(event.target);
         var newState={};
         newState[name] = name=="checked"?event.target.checked:event.target.value;
         this.setState(newState)

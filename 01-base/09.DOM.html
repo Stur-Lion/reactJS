@@ -13,18 +13,18 @@
 <script src="./react-dom.js"></script>
 <script src="http://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script>
 <script type="text/babel">
-    var Refdom = React.createClass({
-      render:function () {
-        return(
-          <div>
-            <input type="text" ref="textInput"/>
-            <button onClick={this.clickhandle}>点击</button>
-          </div>
-        )
-      },
-      clickhandle:function () {
-        this.refs.textInput.value = 111
-      }
-    })
-    ReactDOM.render(<Refdom/>,document.getElementById('hello'))
+  var Refdom = React.createClass({
+    render: function () {
+      return (
+        <div>
+          <input type="text" ref="textInput"/>
+          <button onClick={this.clickhandle}>点击</button>
+        </div>
+      )
+    },
+    clickhandle: function () {
+      this.refs.textInput.value = 111
+    }
+  })
+  ReactDOM.render(<Refdom/>, document.getElementById('hello'))
 </script>

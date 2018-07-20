@@ -13,38 +13,38 @@
 <script src="./react-dom.js"></script>
 <script src="http://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script>
 <script type="text/babel">
-    var HookFun = React.createClass({
-        getInitialState:function () {
-            console.log('1-getinitialState');
-            return {
-                initData:0
-            }
-        },
-        componentWillMount:function () {
-            console.log('2-componentWillMount');
-        },
-        componentDidMount:function () {
-            console.log('3-componentDidMount');
-        },
-        componentWillUpdate:function () {
-            console.log('4-componentWillUpdate');
-        },
-        componentDidUpdate:function () {
-            console.log('5-componentDidUpdate');
-        },
-        addClick:function (e) {
-            this.setState({
-                initData:this.state.initData+1
-            })
-        },
-        render:function () {
-            return(
-                <div>
-                    {this.state.initData}<br/>
-                    <button onClick={this.addClick}>Add</button>
-                </div>
-            )
-        }
-    })
-    ReactDOM.render(<HookFun/>,document.getElementById("hello"))
+  var HookFun = React.createClass({
+    getInitialState: function () {
+      console.log('1-getinitialState');
+      return {
+        initData: 0
+      }
+    },
+    componentWillMount: function () {
+      console.log('2-componentWillMount');
+    },
+    componentDidMount: function () {
+      console.log('3-componentDidMount');
+    },
+    componentWillUpdate: function () {
+      console.log('4-componentWillUpdate');
+    },
+    componentDidUpdate: function () {
+      console.log('5-componentDidUpdate');
+    },
+    addClick: function (e) {
+      this.setState({
+        initData: this.state.initData + 1
+      })
+    },
+    render: function () {
+      return (
+        <div>
+          {this.state.initData}<br/>
+          <button onClick={this.addClick}>Add</button>
+        </div>
+      )
+    }
+  })
+  ReactDOM.render(<HookFun/>, document.getElementById("hello"))
 </script>
